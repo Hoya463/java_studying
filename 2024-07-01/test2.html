@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹사이트의 모습을 기술하기 위한 마크업 언어</title>
+</head>
+<body>
+    <p>
+        <strong>마크업 정보</strong><br>
+        <b>마크업 언어</b><br>
+        <em>중요한 내용을 알고 있는 em태그 단순히 이탤릭체로 표시</em><br>
+    </p>
+
+    <p>
+        <sub>아래첨자</sub> <sup>윗첨자</sup><br>
+        <b><abbr title="Internet of Things">IoT</abbr></b><br>
+        <em>비포선셋</em><br>
+        <ruby>아래글자<rt>윗글자</rt></ruby>
+
+    </p>
+    <!-- 이미지 확장자 설명-->
+    <img src="images/coke.jpg" alt="이미지가 손상되었거나 열리지 않을 경우 대체할 텍스트" 
+    width="300px"><br>
+
+    <!--
+        gif : 표시할 수 있는 색상 수가 최대 256가지이지만 다른 이미지
+        파일 형식에 비해 크기가 작다.
+        아이콘, 불릿 등 작은 이미지에 주로 사용
+        투명한 배경이나 움직이는 이미지를 만들 수 있다.
+        jpg / jpeg : 사진을 위해 개발된 형식
+        gif보다 다양한 색상. 명암 표현
+        저장을 반복하다 보면 화질이 떨어진다.
+        png : 투명 배경을 만들 수 있고 다양한 색상 표현
+        네트워크용으로 개발되어 최근 많이 사용
+    
+    -->
+    <img src="images/image_gif.gif" title="gif 이미지" alt="gif 이미지" width="300px"><br>
+    <img src="images/image_jpeg.jpg" title="jpeg 이미지" alt="jpeg 이미지" width="300px"><br>
+    <img src="images/image_png.png" title="png 이미지" alt="png 이미지" width="300px"><br>
+    <hr>
+    <h3> ul : unordered list 목차가 없는 리스트</h3>
+    <ul> 프론트 엔드 : 사용자에게 보여지는 부분
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h3> ol : ordered list 목차가 있는 리스트</h3>
+    <ol> 
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h2>리코타 치즈 만들기</h2>
+    <p><b>재료 : </b> 우유, 생크림, 소금, 레몬즙</p>
+
+    <h4>재료 준비</h4>
+    <ol type="1">
+        <li>분량의 재룔를 넣고</li>
+        <li>골고루 섞은 후</li>
+        <li>불의 세기를 중불로 조절</li>
+        <li>끓기 시작하면 약불로</li>
+    </ol>
+
+    <h2>리코타 치즈 샐러드 만들기</h2>
+    <ol type="a">
+        <li>위에서 만든 리코타 치즈를 이용해서</li>
+        <li>샐러드를 만들어 봅니다</li>
+    </ol>
+    <h4>재료 준비</h4>
+    <ol type="a" start="3">
+        <li>야채를 씻어서 물기를 빼줍니다.</li>
+    </ol>
+
+    <h4>샐러드 소스 종류</h4>
+
+    <dl> <!--정의 리스트 79쪽-->
+        <dt>시판용 소스</dt> <!--용어-->
+        <dd>다양한 시판용 소스가 있다</dd><!--설명-->
+    </dl>
+    <dl>
+        <dt>소스 만들기</dt>
+        <dd>오늘은 레몬을 활용한 소스를</dd>
+    </dl>
+
+    <!-- ol 태그 77쪽-->
+    <!--
+        type : 마커 종류
+            type "1" (디폴트) 1, 2, 3
+            type "A" A, B, C ...
+            type "a" a, b, c ...
+            type "I" I, II, III ...
+            type "i" i, ii, iii ...
+
+        start : 마커의 시작 값
+            예) start 가 5일 경우 5, 6, 7 ...
+    -->
+
+
+    <ul> 
+        <li>1일차</li>
+        <ol type="a">
+            <li>해녀박물관</li>
+            <li>낚시 체험</li>
+        </ol>
+        <li>2일차</li>
+        <ol type="A" start="3">
+            <li>용눈이오름</li>
+            <li>만장굴</li>
+            <li>카약체험</li>
+        </ol>
+    </ul>
+
+    <!--설명 목록 만들기-->
+    <!--description list-->
+    <!--dt 이름(단어명), dd 값(설명)-->
+    <dl>
+        <dt>올레 1코스</dt>
+        <dd>코스 : 시흥 초등학교 옆 - 광치기 해변</dd>
+        <dd>거리 : 14.6km(4~5시간)</dd>
+        <dd>난이도 : 중</dd>
+
+        <dt>올레 2코스</dt>
+        <dd>코스 : 광치기 해변 - 온평 포구</dd>
+        <dd>거리 : 15.5km(4~5시간)</dd>
+        <dd>난이도 : 중</dd>
+    </dl>
+
+
+</body>
+</html>
