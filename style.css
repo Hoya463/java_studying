@@ -1,3 +1,35 @@
-img{
-  box-shadow: 5px 5px 5px lightgray;
+*{
+  margin: 0;
+  padding: 0;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: greenyellow;
+  height: 70px;
+}
+ul{
+  list-style: none;
+  display: flex;
+}
+li{
+  padding: 0 15px;
+}
+li:hover{
+  background-color: white;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+main{
+  height: 500px;
+  background-color: rgb(239, 255, 215);
+}
+footer{
+  background-color: darkolivegreen;
+  color: aliceblue;
 }

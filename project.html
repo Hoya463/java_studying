@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #list{
+            display: none;
+        }
+        #list.active{
+            display: block;
+        }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">Home</a>
+    <ul class="projectlist">
+      <li id="first" onclick="show()">
+        2024-07-01
+        <ul id="list">
+            <li><a href="/2024-07-01/index.html">index.html</a></li>
+            <li><a href="/2024-07-01/introduce.html">introduce.html</a></li>
+            <li><a href="/2024-07-01/rest.html">rest.html</a></li>
+            <li><a href="/2024-07-01/table.html">table.html</a></li>
+            <li><a href="/2024-07-01/test.html">test.html</a></li>
+            <li><a href="/2024-07-01/test2.html">test2.html</a></li>
+        </ul>
+      </li>
+      <li>2024-07-02</li>
+      <li>2024-07-03</li>
+      <li>2024-07-04</li>
+      <li>2024-07-05</li>
+      <li>2024-07-08</li>
+      <li>2024-07-09</li>
+      <li>2024-07-10</li>
+      <li>2024-07-11</li>
+    </ul>
+
+    <script>
+      let first = document.getElementById("first")
+      let list = document.getElementById("list")
+
+      function show(){
+        list.classList.toggle("active")
+      }
+    </script>
+  </body>
+</html>
