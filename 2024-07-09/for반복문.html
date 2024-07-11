@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1부터 5까지 더하기
+      let sum1 = 0;
+      for (let i = 1; i < 6; i++) {
+        sum1 += i;
+      }
+      console.log(sum1);
+      document.write(`1부터 5까지 합 ${sum1}입니다`);
+
+      let sum2 = 0;
+      for (let i = 0; i < 11; i += 2) {
+        sum2 += i;
+        document.write(`${i}<br>`);
+      }
+      document.write(sum2 + "<br>");
+
+      //2
+      let sumE = 0;
+      for (let i = 1; i <= 10; i++) {
+        if (i % 2 === 0) {
+          sumE += i;
+          document.write(i + "------" + sumE + "<br>");
+        }
+      }
+
+      //벽찍기
+      
+
+      for (let i = 0; i < 5; i++) {
+        document.writeln("hello<br>");
+      }
+    </script>
+  </body>
+</html>

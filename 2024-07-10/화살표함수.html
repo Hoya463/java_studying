@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 150px;
+            height: 150px;
+            background-color: greenyellow;
+            margin: 100px auto;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <img src="../images/image_jpeg.jpg" id="abc">
+    <hr>
+    <img src="../images/coke.jpg" id="pic1">
+    <img src="../images/discord_icon.png" id="pic2">
+    <button id="on">켜기</button>
+    <button id="off">끄기</button>
+    
+    <script>
+        //이벤트 리스너 261p,393p~
+
+        const $box = document.querySelector("#box")
+        const $abc = document.querySelector("#abc")
+        //마우스 올리면
+        $box.addEventListener("mouseenter", () =>{
+            $box.style.backgroundColor = "blue"
+            $abc.src = "../images/coke.jpg"
+        })
+        
+
+        //마우스 벗어나면
+        $box.addEventListener("mouseleave", () =>{
+            $box.style.backgroundColor = "red"
+            $abc.src = "../images/coke_3.jpeg"
+        })
+        
+        const $button1 = document.querySelector("#on")
+        const $button2 = document.querySelector("#off")
+        const $pic1 = document.querySelector("#pic1")
+        const $pic2 = document.querySelector("#pic2")
+        $button1.addEventListener( "click",()=>{
+            $pic1.src = "../images/coke_2.jpeg"
+            $pic2.src = "../images/ikea_logo.png"
+        })
+        $button2.addEventListener("click",()=>{
+            $pic1.src = "../images/coke.jpg"
+            $pic2.src = "../images/discord_icon.png"
+        })
+        
+    </script>
+</body>
+</html>

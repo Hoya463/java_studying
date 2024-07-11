@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background-color: rgb(123, 166, 59);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    국어, 수학, 영어 점수를 입력받아 평균 점수를 나타내세요
+    <script>
+        //let num = 5;
+        //if (num%2===0) {
+        //    console.log("짝수");
+        //}else {
+        //    console.log("홀수");
+        //} 
+        let kor ;
+        let eng;
+        let mat;
+        kor = Number(prompt("국어 점수를 입력하세요",""))
+        mat = Number(prompt("수학 점수를 입력하세요",""))
+        eng = Number(prompt("영어 점수를 입력하세요",""))
+        
+        var result = kor+mat+eng
+        var sum = result/3
+        document.write("<h2>국어"+ kor+"점, 영어: "+ eng +"점, 수학: "+mat+"점으로 합계는"+result+"점")
+        document.write("<h1>평균 점수는 "+sum+"입니다.</h2>");
+        
+        if(sum>=90){
+            document.write("A<br>합격입니다.")
+        }else if(sum>=80){
+            document.write("B<br>합격입니다")
+        }else if(sum>=70){
+            document.write("C<br>재시험대상입니다")
+        }else{
+            document.write("F<br>재시험대상입니다.")
+        }
+    </script>
+</body>
+</html>

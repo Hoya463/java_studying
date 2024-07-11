@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerHtml</title>
+    <style>
+      h2 {
+        background-color: skyblue;
+        color: aliceblue;
+      }
+      #innerH {
+        width: 300px;
+        height: 500px;
+        border: 5px dotted greenyellow;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>innerHtml을 사용</h2>
+    <hr />
+    <div id="innerH"></div>
+    <button onclick="subway()">Subway버튼</button>
+    <button onclick="bus()">Bus버튼</button>
+    <button onclick="javascript:bus()">Bus버튼</button>
+
+    <script>
+      function subway() {
+        let name = "subway";
+        let city = "홍대역";
+        console.log(name + city);
+        document.getElementById("innerH").innerHTML += name + city;
+      }
+      function bus() {
+        let name = "bus";
+        let city = "신촌역";
+        console.log(name + city);
+        document.getElementById("innerH").innerHTML += name + city;
+      }
+    </script>
+  </body>
+</html>

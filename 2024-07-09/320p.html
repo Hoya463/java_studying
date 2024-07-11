@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>array객체로 배열 만들기</h3>
+    <hr />
+    <script>
+      let degrees = new Array();
+      degrees[0] = 12.5;
+      degrees[1] = 16.7;
+      degrees[2] = 20.2;
+      degrees[3] = 15.2;
+      degrees[4] = 23.1;
+
+      let sum = 0;
+      for (let i = 0; i < degrees.length; i++) {
+        sum += degrees[i];
+        document.write(i+1 + "번째 : " + degrees[i] + "도 <br>");
+      }
+      document.write("평균 온도는 " + sum / degrees.length + "도<br>");
+    </script>
+  </body>
+</html>

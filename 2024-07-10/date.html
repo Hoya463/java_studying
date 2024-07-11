@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="display"></div>
+
+    <script>
+        let date = new Date();
+        console.log(date)
+        console.log(date.getFullYear())
+        console.log(date.getMonth()); //0~11까지로 표현
+        let month = date.getMonth() + 1;
+        document.write(`이번 달은 ${month}월 입니다<br>`)
+
+        console.log(month)
+        console.log(date.getDate())
+        console.log(date.getDay())
+
+        document.write(`오늘은 ${date.getFullYear()}년
+        ${month}월 ${date.getDate()}일 입니다 <br><br>`)
+        document.write(`현재 시각은 ${date.getHours()}시 ${date.getMinutes()}분
+        ${date.getUTCSeconds()}초 입니다<br>`)
+
+
+        //요일을 배열로 처리
+        let specialDays = new Array("일","월","화","수","목","금","토")
+        document.write(specialDays[date.getDay()]+"요일입니다 <br><br>")
+
+        //Date객체에서 현재 날짜와 시간 정보를 로컬 형식으로 바꿔주는 메서드
+        document.write("현재 시각은" + date.toLocaleString())
+
+        //Math
+        console.log(Math.random()); //0포함 1사이의 숫자 (0~0.9)
+        console.log(Math.random()*100)//0~100미만
+        console.log(Math.random()*100+1)//1~100까지
+        console.log(Math.floor(Math.random()*100+1))
+        console.log(Math.random()*101) //0포함~100
+
+    </script>
+</body>
+</html>

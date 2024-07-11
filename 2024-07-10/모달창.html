@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #modal-box {
+        border: 2px solid red;
+        background-color: rgba(128, 128, 128, 0.648);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+      #modal-box.active {
+        display: flex;
+      }
+      #modal-content {
+        width: 300px;
+        height: 200px;
+        border: 3px dashed;
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="open">프로필 보기</button>
+
+    <div id="modal-box">
+      <div id="modal-content">
+        <span id="title">My Profile</span>
+        <button id="close">닫기</button>
+      </div>
+    </div>
+
+    <script>
+      const open = document.querySelector("#open");
+      const close = document.querySelector("#close");
+      const modalbox = document.querySelector("#modal-box");
+
+      open.addEventListener("click", () => {
+        //클릭하면 클래스리스트에 .active 스타일 추가
+        //modalbox.classList.add("active");
+        modalbox.classList.toggle("active");
+      });
+      close.addEventListener("click", () => {
+        //클릭하면 클래스리스트에 .active 스타일 제거
+        //modalbox.classList.remove("active");
+        modalbox.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>

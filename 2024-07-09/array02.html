@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="theBody">글자 배경색 바꾸기</div>
+    <button onclick="change()">랜덤 버튼</button>
+
+    <script>
+      function change() {
+        let arrColor = ["red", "blue", "greem", "skyblue", "yellow"];
+        let $bodyTag = document.getElementById("theBody");
+        let arryNum = Math.floor(Math.random() * arrColor.length);
+        // Math.random() 랜덤한 숫자를 반환 0.0~1의 소수점 포함
+        // Math.floor() 소수점을 버림
+        $bodyTag.style.backgroundColor = arrColor[arryNum];
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animantion 연습</title>
+    <style>
+      section {
+        background-image: url("../images/pic1.jpg");
+        background-size: cover;
+        margin: 0;
+        height: 900px;
+        width: 100%;
+      }
+      .firPart span {
+        color: blue;
+        font-size: 50px;
+        position: absolute;
+        top: 52%;
+        right: 5%;
+        animation: moveIn 2s ease-out;
+      }
+      @keyframes moveIn {
+        from{
+            right: -10%;
+            opacity: 0;
+        }to{
+            right: 5%;
+            opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="firPart">
+        <span> pour un logiciel CRM, </span> <br />
+        <p>
+          simple, complet <br />
+          et intuitif
+        </p>
+      </div>
+
+      <pre class="secPart">
+        CRM 소프트웨어를 선택하고,
+        간단하고 완전하며
+        직관적인
+      </pre>
+    </section>
+  </body>
+</html>
