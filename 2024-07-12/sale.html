@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+      }
+      .contents {
+        display: flex;
+        border: 5px solid;
+        border-radius: 5px;
+        background-color: rgba(220, 20, 60, 0.559);
+      }
+      .showResult {
+        border: 5px solid rgb(249, 45, 45);
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contents">
+      <img src="../images/coke.jpg" alt="" />
+      <form>
+        <ul>
+          <li>
+            <label for="oPrice"
+              >원래 가격 <input type="text" id="oPrice" />원
+            </label>
+          </li>
+          <li>
+            <label for="rate">할인율 <input type="text" id="rate" /></label>%
+          </li>
+          <button onclick="discount()">할인 가격 계산하기</button>
+        </ul>
+      </form>
+    </div>
+    <!-- 결과창 출력할 곳 -->
+    <div class="showResult"></div>
+    <script>
+      function discount() {
+        event.preventDefault(); //새로고침 방지
+        let oPrice = document.getElementById("oPrice").value;
+        let rate = document.getElementById("rate").value;
+        let ratePrice = oPrice * (rate / 100);
+        let result = oPrice - ratePrice;
+
+        document.querySelector(".showResult").innerHTML = `
+        원래가격: ${oPrice}원<br>
+        할인율: ${rate}%<br>
+        할인금액: ${ratePrice}원<br>
+        최종가격: ${Math.floor(result)}원`;
+        console.log(result);
+      }
+    </script>
+  </body>
+</html>

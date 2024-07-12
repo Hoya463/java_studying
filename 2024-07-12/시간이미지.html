@@ -4,34 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <a href="index.html">LoGo</a>
-      </div>
-      <div class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="project.html">Project</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://github.com/Hoya463/java_studying">Github</a></li>
-          <li><a href="todo.html">Todo</a></li>
-        </ul>
-      </div>
-      <div class="icons">
-        <ul>
-          <li><a href="#">아이콘</a></li>
-        </ul>
-      </div>
-    </nav>
-    <main>
-      <div id="clock"></div>
-      <div id="content"><p>장경호의<br> Java웹 프로그래밍</p></div>
-    </main>
-    <footer>하단 부분</footer>
+    <div id="container">
+      <h1>시간에 따라 변하는 이미지</h1>
+    </div>
 
     <script>
       const today = new Date(); //현재 시간과 날짜를 담은 변수
@@ -39,10 +16,18 @@
       const min = today.getMinutes(); //현재 시간 중 분 정보만 가져오기
       const sec = today.getSeconds();
 
-      const clock = document.querySelector("#clock");
+      const container = document.querySelector("#container");
+
+      let newImg = document.createElement("img");
+      newImg.src = hrs < 8 ? "../images/coke.jpg" : "../images/coke_1.jpeg";
+      container.appendChild(newImg);
+
+      
+      let timer = document.createElement("p");
+      timer.innerText = `${hrs}:${min}:${sec}`;
+      time();
 
       //시계기능
-      time();
       setInterval(time, 1000);
       function time() {
         const today = new Date(); //현재 시간과 날짜를 담은 변수
@@ -51,7 +36,7 @@
         const sec = today.getSeconds();
         let timer = document.createElement("p");
         timer.innerText = `${hrs}:${min}:${sec}`;
-        clock.appendChild(timer);
+        container.appendChild(timer);
         setTimeout(() => {
           timer.remove();
         }, 999);
